@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="image/mango.png">
+  <title>Experience | Visit Perlis</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Raleway:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar glass animate-fade">
+    <div class="container">
+      <a href="index.html" class="logo">Visit <span>Perlis</span></a>
+      <!-- Hamburger for mobile -->
+      <button class="menu-button" onclick="showSidebar()" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+          <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+        </svg>
+      </button>
+      <!-- Desktop nav -->
+      <nav id="main-nav">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="gallery.html">Gallery</a></li>
+          <li class="dropdown">
+            <button class="dropdown-toggle">Discover <i class="fas fa-caret-down"></i></button>
+            <ul class="dropdown-menu">
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="culture.html">Culture</a></li>
+              <li><a href="cuisine.html">Cuisine</a></li>
+              <li><a href="experience.html">Experience</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <!-- Sidebar for mobile -->
+      <ul class="sidebar" id="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+              <path
+                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+            </svg>
+          </a>
+        </li>
+        <li><a href="gallery.html">Gallery</a></li>
+         <li class="sidebar-dropdown">
+          <button class="sidebar-dropdown-toggle" onclick="toggleSidebarDropdown()">Discover <i
+              class="fas fa-caret-down"></i></button>
+          <ul class="sidebar-dropdown-menu" id="sidebarDropdownMenu">
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="cuisine.html">Cuisine</a></li>
+            <li><a href="experience.html">Experience</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- ===== HERO ===== -->
+  <header class="herovid">
+    <!-- Video latar — tukar src ke fail MP4 anda sendiri -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="video3/videoviewperlis.mp4" type="video/mp4" />
+      <!-- Fallback teks jika pelayar tak sokong video -->
+
+    </video>
+
+    <!-- Lapisan gelap + teks -->
+    <div class="hero-overlay">
+      <h1>Experience Exploring Perlis</h1>
+    </div>
+  </header>
+
+  <br>
+  <!-- ===== INTRO ===== -->
+  <section class="intro" style="background-color: #f1f2ec;">
+    <h2 class="section-title">Why need to choose Perlis as your next experiences?</h2>
+    <p>Perlis, the smallest state in Malaysia, offers stunning natural beauty, 
+      rich culture and mouth-watering northern cuisine. Its border with Thailand
+      makes Perlis an ideal shopping and weekend getaway destination.</p>
+  </section>
+  <br>
+  <!-- ===== ATTRACTIONS ===== -->
+  <section class="intro" style="background-color:#f1f2ec;">
+    <h2 class="section-title">Attractions</h2>
+    <div class="attractions">
+      <div class="card">
+        <img src="image/bukitketri1.jpeg" alt="Bukit Keteri" />
+        <div class="card-content">
+          <h3>Bukit Keteri</h3>
+          <p>Climb limestone formations while enjoying the Perlis paddy field panorama.</p>
+          <button class="video-btn" onclick="openVideoModal('video/bukitketri.mp4')">
+            ▶️ Watch Video
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/gua kelam.jpg" alt="Gua Kelam" />
+        <div class="card-content">
+          <h3>Gua Kelam</h3>
+          <p>Explore a 370m long limestone cave with a fascinating underground river.</p>
+          <button class="video-btn" onclick="openVideoModal('video2/guakelam.mp4')">
+            ▶️ Watch Video
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tasik melati1.png" alt="Tasik Melati" />
+        <div class="card-content">
+          <h3>Tasik Melati</h3>
+          <p>Relax in a lotus-filled lake while riding an Instagram-worthy wooden platform.</p>
+          <button class="video-btn" onclick="openVideoModal('video4/tasikmelati.mp4')">
+            ▶️ Watch Video
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/wang kelian viewpoint.png" alt="Wang Kelian Viewpoint" />
+        <div class="card-content">
+          <h3>Wang Kelian Viewpoint</h3>
+          <p>Enjoy the sea of ​​clouds at dawn at the peak of Wang Kelian, famous as the "Sky Walk" of Perlis.</p>
+          <button class="video-btn" onclick="openVideoModal('video3/wangkelian.mp4')">
+            ▶️ Watch Video
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/padang besar.jpg" alt="Padang Besar" />
+        <div class="card-content">
+          <h3>Padang Besar</h3>
+          <p>A cross-border shopping paradise with cheap goods and authentic Thai food.</p>
+          <button class="video-btn" onclick="openVideoModal('video4/padangbesar.mp4')">
+            ▶️ Watch Video
+          </button>
+        </div>
+      </div>
+
+      <!-- Tambahan 3 tempat menarik -->
+      <div class="card">
+        <img src="image/taman negeri.jpg" alt="Taman Negeri Perlis" />
+        <div class="card-content">
+          <h3>Taman Negeri Perlis</h3>
+          <p>Eco-tourism destination with jungle trails, exotic flora and rare wildlife.</p>
+          <button class="video-btn" onclick="openVideoModal('video4/tamanperlis.mp4')">
+            ▶️ Watch Video
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/kota kayang.jpg" alt="Muzium Kota Kayang" />
+        <div class="card-content">
+          <h3>Muzium Kota Kayang</h3>
+          <p>Immerse yourself in the history of the Perlis Sultanate at a museum set against a backdrop of mountains and
+            ancient ruins.</p>
+          <button class="video-btn" onclick="openVideoModal('video3/muzium.mp4')">
+            ▶️ Watch Video
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/taman ular.jpg" alt="Taman Ular dan Reptilia Perlis" />
+        <div class="card-content">
+          <h3>Taman Ular dan Reptilia Perlis</h3>
+          <p>Interact with various species of snakes and reptiles in a unique sanctuary park.</p>
+          <button class="video-btn" onclick="openVideoModal('video2/reptilia.mp4')">
+            ▶️ Watch Video
+          </button>
+        </div>
+      </div>
+
+      <!-- 🔵 Video Modal -->
+      <div id="videoModal" class="modalvid">
+        <div class="modal-contentvid">
+          <span class="closevid" onclick="closeVideoModal()">&times;</span>
+          <video id="modalVideo" controls autoplay muted>
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+
+  </section>
+  <br>
+  <!-- ===== ITINERARY ===== -->
+  <section class="intro" style="background-color:#f1f2ec;">
+    <h2 class="section-title">One Day Itinerary</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>7:00&nbsp;AM – Wang Kelian Viewpoint</h4>
+        <p>Wake up early to watch the sunrise accompanied by a sea of ​​clouds.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>9:30&nbsp;AM – Breakfast kerabu rice Kangar</h4>
+        <p>Try the kerabu rice with fish and teh tarik.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>11:00&nbsp;AM – Gua Kelam</h4>
+        <p>Walking on the wooden bridge in the cave while listening to the sound of water.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>1:00&nbsp;PM – Eat Laksa Perlis</h4>
+        <p>A must-stop in Kuala Perlis, the laksa utara is thick with thick gravy.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>3:00&nbsp;PM – Tasik Melati</h4>
+        <p>Ride a canoe on a lake filled with lotuses and take pictures.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>5:00&nbsp;PM – Hiking Bukit Keteri</h4>
+        <p>A short hike in the evening for views of the golden rice fields.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>8:00&nbsp;PM – Padang Besar Night Market</h4>
+        <p>Buy souvenirs, cheap t-shirts and enjoy Thai mango sticky rice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--Scroll to Top Button -->
+  <button id="scrollToTopBtn" title="Back to top">⇧</button>
+
+  <br>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3><span class="highlight">Visit Perlis</span></h3>
+        <p>Discover culture, cuisine, and nature in Malaysia's hidden gem.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="cuisine.html">Cuisine</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Stay Connected</h3>
+        <form id="subscribeForm" class="subscribe-form">
+          <input type="email" name="email" placeholder="Your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="responseMsg"></p>
+
+        <div class="social-icons">
+          <a href="https://m.facebook.com/PerlisAktif/" target="_blank" class="social-icons"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/perlisaktif?igsh=MWFqdmo4MG9ubXd5Nw==" target="_blank"
+            class="social-icons"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@perlishariini" target="_blank" class="social-icons"><i
+              class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Visit Perlis. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+  <script src="js/subscribe.js"></script>
+  <script src="js/pagination.js"></script>
+</body>
+
+</html>

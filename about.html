@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="image/mango.png">
+  <title>About | Visit Perlis</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <body class="about-page"
+    style="background: url('image/tasik1.jpg') no-repeat center center/cover; background-attachment: fixed;">
+
+
+     <!-- Navbar -->
+  <header class="navbar glass animate-fade">
+    <div class="container">
+      <a href="index.html" class="logo">Visit <span>Perlis</span></a>
+      <!-- Hamburger for mobile -->
+      <button class="menu-button" onclick="showSidebar()" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+          <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+        </svg>
+      </button>
+      <!-- Desktop nav -->
+      <nav id="main-nav">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="gallery.html">Gallery</a></li>
+          <li class="dropdown">
+            <button class="dropdown-toggle">Discover <i class="fas fa-caret-down"></i></button>
+            <ul class="dropdown-menu">
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="culture.html">Culture</a></li>
+              <li><a href="cuisine.html">Cuisine</a></li>
+              <li><a href="experience.html">Experience</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <!-- Sidebar for mobile -->
+      <ul class="sidebar" id="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+              <path
+                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+            </svg>
+          </a>
+        </li>
+        <li><a href="gallery.html">Gallery</a></li>
+         <li class="sidebar-dropdown">
+          <button class="sidebar-dropdown-toggle" onclick="toggleSidebarDropdown()">Discover <i
+              class="fas fa-caret-down"></i></button>
+          <ul class="sidebar-dropdown-menu" id="sidebarDropdownMenu">
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="cuisine.html">Cuisine</a></li>
+            <li><a href="experience.html">Experience</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+    <main class="about-content">
+      <div class="about-card" onclick="window.open('https://en.wikipedia.org/wiki/Perlis', '_blank')">
+        <h2><i class="fas fa-map-marker-alt"></i> Introduction to Perlis</h2>
+        <p>Perlis, officially Perlis Indera Kayangan, is the smallest state in Malaysia, rich in culture and
+          heritage.</p>
+      </div>
+
+      <div class="about-card" onclick="window.open('https://en.wikipedia.org/wiki/History_of_Perlis', '_blank')">
+        <h2><i class="fas fa-history"></i> History of Perlis</h2>
+        <p>Once part of Kedah, Perlis became its own kingdom in the 19th century under the Jamalullail dynasty.
+        </p>
+      </div>
+
+      <div class="about-card" onclick="window.open('https://www.google.com/search?q=perlis+culture', '_blank')">
+        <h2><i class="fa fa-list-ul" aria-hidden="true"></i> Culture & Heritage</h2>
+        <p>Experience authentic Malay culture, unique dialects, and traditional arts in Perlis.</p>
+      </div>
+
+      <div class="about-card" onclick="window.open('https://www.google.com/search?q=gua+kelam+perlis', '_blank')">
+        <h2><i class="fas fa-tree"></i> Natural Beauty</h2>
+        <p>Perlis offers limestone caves, lush parks, and scenic countryside to explore.</p>
+      </div>
+
+      <div class="about-card" onclick="window.open('https://www.google.com/search?q=perlis+food', '_blank')">
+        <h2><i class="fas fa-utensils"></i> Cuisine</h2>
+        <p>Delicious Perlis dishes like ikan bakar, pulut mempelam, and laksa Perlis are a must-try.</p>
+      </div>
+
+      <div class="about-card" onclick="window.open('https://www.google.com/search?q=visit+perlis', '_blank')">
+        <h2><i class="fas fa-star"></i> Why Visit Perlis?</h2>
+        <p>Discover the peaceful countryside and authentic village charm in Malaysia's northern gem.</p>
+      </div>
+    </main>
+
+    <!--Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Back to top">⇧</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3><span class="highlight">Visit Perlis</span></h3>
+          <p>Discover culture, cuisine, and nature in Malaysia's hidden gem.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="cuisine.html">Cuisine</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Stay Connected</h3>
+          <form id="subscribeForm" class="subscribe-form">
+            <input type="email" name="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p id="responseMsg"></p>
+
+          <div class="social-icons">
+            <a href="https://m.facebook.com/PerlisAktif/" target="_blank" class="social-icons"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/perlisaktif?igsh=MWFqdmo4MG9ubXd5Nw==" target="_blank"
+              class="social-icons"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@perlishariini" target="_blank" class="social-icons"><i
+                class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Visit Perlis. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/subscribe.js"></script>
+    <script src="js/pagination.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+
+</html>
